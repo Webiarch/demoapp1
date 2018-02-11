@@ -25,7 +25,7 @@ SECRET_KEY = 'c(kg73^1pez&+*y5go2*yt$v5b(@y6x50%#3-$h%hs6hd0xa&b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['webfebapp.herokuapp.com']
 
 
 # Application definition
@@ -123,4 +123,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
